@@ -9,3 +9,4 @@ socialBtn.addEventListener('click', () => {
     userContainer.style.display = 'none'
 
 })
+
