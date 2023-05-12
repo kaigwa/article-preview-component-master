@@ -41,23 +41,36 @@ body{
 .main{
     /* margin: auto; */
     width: 370px;
-    height: 590px;
+    height: 585px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 /* image design section */
+.image{
+    width: 375px;
+    height: 180px;
+    overflow: hidden;
+}
+
 .image img{
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
     position: relative;
     bottom: 30px;
     border-radius: 10px 10px 0 0;
+    padding: 30px 28px 20px
+
+    /* object-fit: cover;
+    object-position: top;
+    transition: all 0.5s ease; */
+
 }
 
 /* text design section */
@@ -123,17 +136,7 @@ body{
     cursor: pointer;
 }
 
-/* @keyframes slideInRight {
-    from {
-        transform: translateY(-300);
-    }
-    to {
-        transform: translateY(0);
-    }
-} */
-
 .media{
-    /* width: 371px; */
     width: 100%;
     height: 70px;
     background-color: hsl(217, 19%, 35%);
@@ -144,15 +147,9 @@ body{
     border-radius: 0 0 10px 10px;
     position: relative;
     bottom: 2%;
-
-    /* animation-name: slideInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-delay: 2s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: none;
-  */
+    transition: all 2s linear;
+    /* transition: .5s ease; */
+    /* left: 0; */
 }
 
 .nav{
@@ -233,7 +230,7 @@ body{
 
 /* @media query section */
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 760px) {
     body{
         display: flex;
         flex-direction: column;
@@ -289,9 +286,7 @@ body{
         gap: 140px;
     }
 
-    .hidden{
-        display: none;
-    }
+   
 
     .media{
         width: 50%;
@@ -308,27 +303,22 @@ body{
         /* display: none; */
     }
 
-    .backbtn{
+    .media::after {
+        content: '';
+        background-color: hsl(217, 19%, 35%);
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -60%) rotate(45deg);
+    
+    }
+    .hidden{
         display: none;
     }
 
-    /* @media only screen and (min-width: 768px){
-        .hidden{
-            display: none;
-        }
-
-        .media{
-            width: 100%;
-            height: 70px;
-            background-color: hsl(217, 19%, 35%);
-            display: flex;
-            flex-direction: row;
-            align-items:center;
-            justify-content: space-evenly;
-            border-radius: 0 0 10px 10px;
-            position: relative;
-            top: 15%; 
-            display: none; 
-        }
-    } */
+    .backbtn{
+        display: block;
+    }
 }
