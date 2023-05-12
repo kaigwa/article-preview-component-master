@@ -1,10 +1,10 @@
 const socialBtn = document.getElementById('social');
-const mediaContainer = document.querySelector('.media');
+const navContainer = document.querySelector('.nav');
 const userContainer = document.querySelector('.user')
 // const returnBtn = document.querySelector('#return');
 
 socialBtn.addEventListener('click', () => {
-  mediaContainer.classList.remove('hidden')
+  navContainer.classList.remove('hidden')
 //   console.log(mediaContainer)
     userContainer.style.display = 'none'
 

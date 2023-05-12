@@ -13,7 +13,7 @@
 */
 
 /* importing font family */
-@import url('https://fonts.google.com/specimen/Manrope');
+/* @import url('https://fonts.google.com/specimen/Manrope'); */
 
 *{
     margin: 0;
@@ -41,6 +41,7 @@ body{
 
 .main{
     /* margin: auto; */
+    /* overflow: hidden; */
     width: 370px;
     height: 100%;
     display: flex;
@@ -56,19 +57,16 @@ body{
 
 /* image design section */
 .image{
-    width: 100%;
+    /* width: 100%; */
     /* height: 180px; */
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .draw{
     width: 100%;
-    /* height: 100%; */
-    /* position: relative;
-    bottom: 30px; */
+    height: 100%;
     border-radius: 10px 10px 0 0;
     /* padding: 30px 28px 20px; */
-
     /* object-fit: cover;
     object-position: top;
     transition: all 0.5s ease; */
@@ -76,6 +74,13 @@ body{
 
 
 /* text design section */
+/* .word{
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
 .text p{
     padding: 10px 30px;
     /* position: relative;
@@ -146,40 +151,52 @@ body{
 }
 
 .media{
+    position: relative;
+    z-index: 1;
+    height: 0;
+  
+    /* transition: all 2s ease;
+    transition: .5s ease;
+    left: 0; */
+}
+
+.nav{
+    /* padding-right: 30px; */
+    display: flex;
+    flex-direction: block;
+    align-items: center;
+    justify-content: space-evenly;
+    /* gap: 10px; */
+    /* margin-top: 15px;
+    margin-right: 25px; */
+    /* position: relative;
+    right: 6%; */
+    /* --translateY: 0; */
+    /* z-index: -1; */
     width: 100%;
     height: 70px;
     background-color: hsl(217, 19%, 35%);
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: space-evenly;
     border-radius: 0 0 10px 10px;
-    /* position: relative;
-    bottom: 2%; */
-    /* transition: all 2s ease; */
-    /* transition: .5s ease; */
-    /* left: 0; */
+    position: relative; 
+    bottom: 70px;
+    
 }
 
-/* .hidden{
+.nav p{
+    padding-right: 20px;
+}
+
+.nav a{
+    margin-left: -45px;
+}
+
+.hidden{
     display: none;
-} */
-
-.nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 10px;
-    margin-top: 12px;
-    margin-right: 25px;
-    /* position: relative;
-    right: 6%; */
 }
-
 
 .share{
     color:hsl(214, 17%, 51%);
-    margin-top: 2px;
+    margin-bottom: 8px;
     font-size: 14.5px;
     font-weight: 500;
 }
@@ -217,6 +234,10 @@ body{
     background-color: hsl(210, 46%, 95%);
     cursor: pointer;
     margin-left: 20px;
+}
+
+.backbtn:hover{
+    filter: invert(1);
 }
 
 /* .return{
